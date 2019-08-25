@@ -1,5 +1,7 @@
 # Github Actions node example
 
+[![GitHub Actions](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Fatrox%2Fsync-dotenv%2Fbadge)](https://actions-badge.atrox.dev/atrox/sync-dotenv/goto)
+
 This example explores using the new [Github actions CI](https://github.com/features/actions) functionality for continuous testing & release.
 
 ## Overview

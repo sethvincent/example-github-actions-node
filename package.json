@@ -14,14 +14,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sethvincent/private-test-repo.git"
+    "url": "git+https://github.com/sethvincent/example-github-actions-node.git"
   },
   "author": "sethvincent <sethvincent@gmail.com> (https://sethvincent.com/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/sethvincent/private-test-repo/issues"
+    "url": "https://github.com/sethvincent/example-github-actions-node/issues"
   },
-  "homepage": "https://github.com/sethvincent/private-test-repo#readme",
+  "homepage": "https://github.com/sethvincent/example-github-actions-node#readme",
   "dependencies": {
     "standard": "^14.0.2",
     "tape": "^4.11.0"
