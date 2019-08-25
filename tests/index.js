@@ -7,6 +7,6 @@ test('ok', function (t) {
 })
 
 test('not ok', function (t) {
-  t.ok(notOk(true))
+  t.notOk(ok(true))
   t.end()
 })
