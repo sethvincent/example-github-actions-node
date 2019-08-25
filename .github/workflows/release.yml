@@ -1,0 +1,40 @@
+name: Release
+
+on: release
+
+jobs:
+  test_before_release:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [10.x]
+    steps:
+      - uses: actions/checkout@v1
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: test_pre_release
+        run: |
+          npm install
+          npm run test-lint
+
+  release:
+    runs-on: ubuntu-latest
+    needs: test_before_release # only deploy if test_before_release step succeeded
+    strategy:
+      matrix:
+        node-version: [10.x]
+    steps:
+      - uses: actions/checkout@v1
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: publish
+        if: github.event.action == 'published' # only deploy if this is the `release published` event
+        uses: actions/npm@master
+        env:
+          NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+        with:
+          args: "publish --access public"

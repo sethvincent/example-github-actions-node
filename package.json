@@ -1,0 +1,30 @@
+{
+  "name": "@sethvincent/example-github-actions-node",
+  "version": "0.0.0",
+  "description": "This example explores using the new Github actions CI functionality for continuous testing & release",
+  "main": "index.js",
+  "scripts": {
+    "git-push": "git push && git push --tags",
+    "major": "npm version major && npm run git-push",
+    "minor": "npm version minor && npm run git-push",
+    "patch": "npm version patch && npm run git-push",
+    "test": "tape tests/*.js",
+    "lint": "standard",
+    "test-lint": "npm run test && npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sethvincent/private-test-repo.git"
+  },
+  "author": "sethvincent <sethvincent@gmail.com> (https://sethvincent.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sethvincent/private-test-repo/issues"
+  },
+  "homepage": "https://github.com/sethvincent/private-test-repo#readme",
+  "dependencies": {
+    "standard": "^14.0.2",
+    "tape": "^4.11.0"
+  },
+  "devDependencies": {}
+}
