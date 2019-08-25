@@ -1,6 +1,6 @@
 # Github Actions node example
 
-![https://github.com/sethvincent/example-github-actions-node/workflows/Test/badge.svg](https://github.com/sethvincent/example-github-actions-node/actions)
+![https://github.com/sethvincent/example-github-actions-node/actions](https://github.com/sethvincent/example-github-actions-node/workflows/Test/badge.svg)
 
 This example explores using the new [Github actions CI](https://github.com/features/actions) functionality for continuous testing & release.
 
