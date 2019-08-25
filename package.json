@@ -1,6 +1,6 @@
 {
   "name": "@sethvincent/example-github-actions-node",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "This example explores using the new Github actions CI functionality for continuous testing & release",
   "main": "index.js",
   "scripts": {
